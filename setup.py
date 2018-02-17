@@ -2,7 +2,7 @@ from setuptools import setup
 
 long_description = ''
 setup(name='cachedmethod',
-    version='0.0.1',
+    version='0.1.0',
     description='',
     long_description=long_description,
     url='http://github.com/g3rb3n/cachedmethod',
