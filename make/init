@@ -1,0 +1,19 @@
+#!/bin/bash
+
+cachedmethod=$1
+
+if [ -z "$cachedmethod" ]; then
+    echo "cachedmethod is not set"
+    exit
+fi
+
+rm -rf .git
+
+find . -type f -exec sed -i "s/cachedmethod/$cachedmethod/g" "{}" +;
+
+shopt -s globstar
+rename "s/cachedmethod/$cachedmethod/" **
+
+git init
+git add *
+git status
